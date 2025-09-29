@@ -155,7 +155,7 @@ func Dial(localAddr, remoteAddr string) error {
 		log("dialing %s", remoteAddr)
 	}
 
-	d := utp.Dialer{LocalAddr: laddr}
+	d := utp.Dialer{LocalAddr: laddr, Timeout: utp.DefaultDialTimeout}
 	c, err := d.Dial("utp", remoteAddr)
 	if err != nil {
 		return err

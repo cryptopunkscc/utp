@@ -8,11 +8,13 @@ import (
 	"time"
 )
 
+const DefaultDialTimeout = 30 * time.Second
+
 // DialUTP connects to the remote address raddr on the network net,
 // which must be "utp", "utp4", or "utp6".  If laddr is not nil, it is
 // used as the local address for the connection.
 func DialUTP(n string, laddr, raddr *Addr) (*Conn, error) {
-	return DialUTPTimeout(n, laddr, raddr, 0)
+	return DialUTPTimeout(n, laddr, raddr, DefaultDialTimeout)
 }
 
 // DialUTPTimeout acts like Dial but takes a timeout.
