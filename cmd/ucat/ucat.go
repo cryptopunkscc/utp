@@ -1,8 +1,9 @@
 // package ucat provides an implementation of netcat using the go utp package.
 // It is meant to exercise the utp implementation.
 // Usage:
-//    ucat [<local address>] <remote address>
-//    ucat -l <local address>
+//
+//	ucat [<local address>] <remote address>
+//	ucat -l <local address>
 //
 // Address format is: [host]:port
 //
@@ -20,7 +21,7 @@ import (
 	"os/signal"
 	"syscall"
 
-	utp "github.com/ipfs/go-ipfs/Godeps/_workspace/src/github.com/h2so5/utp"
+	utp "github.com/cryptopunkscc/utp"
 )
 
 var verbose = false

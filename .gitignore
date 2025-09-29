@@ -24,3 +24,5 @@ _testmain.go
 *.prof
 
 _ucat_test/libutp
+
+.idea
